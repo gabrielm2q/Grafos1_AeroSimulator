@@ -1,44 +1,32 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
-
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
+# AeroSimulator
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Grafos 1<br>
 
 ## Alunos
 |Matrícula | Aluno |
 | -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+| 19/0105267  |  Diógenes Dantas Lélis Júnior |
+| 20/0018167  |  Gabriel Mariano da Silva |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+O presente trabalho visa calcular a melhor rota entre os aeroportos dados os pontos de partida e chegada, oferecendo informações sobre as conexões necessárias, tamanho total da rota e qual aeronave é mais adequada à rota.
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+Em progresso.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: JavaScript<br>
+**Framework**: React<br>
+
+## Como rodar o projeto?
+Pré-requisitos para execução do projeto em fase de elaboração.
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+Informações relativas ao uso do projeto em progresso.
 
 ## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Demais informações em fase de elaboração.
 
 
 
