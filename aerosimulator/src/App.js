@@ -1,13 +1,8 @@
 import './App.css';
+import Aero from './pages/index.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        Hello world!
-      </header>
-    </div>
-  );
+  return <Aero />;
 }
 
 export default App;
