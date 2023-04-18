@@ -1,6 +1,5 @@
 # AeroSimulator
 
-**Número da Lista**: X<br>
 **Conteúdo da Disciplina**: Grafos 1<br>
 
 ## Alunos
