@@ -1,15 +1,20 @@
-import logo from '../assets/airplane.png';
+import logo from '../assets/logo.png';
+import mapa from '../assets/rota-capitais.png';
 
 const Aero = () => {
     return (
         <div class="flex-container">
-            <div class="logo">
-                <img src={logo}></img>
-                <h1>
-                    AeroSimulator
-                </h1>
+            <div class="menu-superior">
+                <div class="logo">
+                    <img src={logo}></img>
+                </div>
+            </div>
+            <div class="mapa">
+                <img src={mapa}></img>
             </div>
         </div>
+        
+        
     );
 }
 

@@ -14,9 +14,18 @@ code {
 
 .flex-container {
     display: flex;
+    flex-direction: column;
+    background-color: #F1FAEE;
+}
+
+.menu-superior {
     background-color: #1D3557;
     height: 40vh;
     border-radius: 0 0 25px 25px;
+}
+
+.mapa {
+
 }
 
 .logo {
@@ -26,9 +35,8 @@ code {
     padding: 60px 0 0 60px;
 }
 
-.logo img {
-    
-}
+
+
 
 .logo h1 {
     font-family: 'B612';
