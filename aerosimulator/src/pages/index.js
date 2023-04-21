@@ -5,9 +5,7 @@ const Aero = () => {
     return (
         <div class="flex-container">
             <div class="menu-superior">
-                <div class="logo">
-                    <img src={logo}></img>
-                </div>
+                <img src={logo}></img>
             </div>
             <div class="mapa">
                 <img src={mapa}></img>
