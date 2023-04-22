@@ -13,22 +13,32 @@ code {
 }
 
 .flex-container {
+    position: relative;
     display: flex;
+    flex-direction: column;
+    background-color: #F1FAEE;
+}
+
+.menu-superior {
     background-color: #1D3557;
-    height: 40vh;
+    height: 45vh;
     border-radius: 0 0 25px 25px;
 }
 
-.logo {
-    flex-wrap: nowrap;
-    flex-direction: row;
-    width: 100%;
-    padding: 60px 0 0 60px;
+.mapa {
+
 }
 
-.logo img {
-    
+.menu-superior img {
+    margin-top: 35px;
+    margin-left: 40px;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
 }
+
+
+
 
 .logo h1 {
     font-family: 'B612';
