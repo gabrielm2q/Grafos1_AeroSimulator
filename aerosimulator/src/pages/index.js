@@ -1,28 +1,18 @@
-import React, { useRef } from 'react';
-import {
-    TransformComponent,
-    TransformWrapper
-} from 'react-zoom-pan-pinch';
+import React, { useEffect, useRef, useState } from 'react';
+import { INITIAL_VALUE, TOOL_NONE, UncontrolledReactSVGPanZoom } from 'react-svg-pan-zoom';
+import { ReactSvgPanZoomLoader } from 'react-svg-pan-zoom-loader';
 import logo from '../assets/logo.png';
-import mapa from '../assets/rota-capitais.png';
-
-const Controls = ({ zoomIn, zoomOut, resetTransform }) => (
-    <>
-      <button onClick={() => zoomIn()}>+</button>
-      <button onClick={() => zoomOut()}>-</button>
-      <button onClick={() => resetTransform()}>x</button>
-    </>
-  );
+import mapa from '../assets/mapa.svg';
 
 const Aero = () => {
-    const transformComponentRef = useRef(null);
+    const Viewer = useRef();
 
-  const zoomToImage = () => {
-    if (transformComponentRef.current) {
-      const { zoomToElement } = transformComponentRef.current;
-      zoomToElement("imgExample");
-    }
-  };
+    const [tool, setTool] = useState(TOOL_NONE);
+    const [value, setValue] = useState(INITIAL_VALUE);
+
+    useEffect(() => {
+        Viewer.current.fitToViewer();
+    }, []);
 
     return (
         <div class="flex-container">
@@ -30,21 +20,29 @@ const Aero = () => {
                 <img src={logo}></img>
             </div>
             <div class="mapa">
-                <TransformWrapper
-                initialScale={1}
-                initialPositionX={200}
-                initialPositionY={100}
-                ref={transformComponentRef}>
-                    {(utils) => (
-                        <React.Fragment>
-                            <Controls {...utils} />
-                            <TransformComponent>
-                                <img src={mapa} alt="MAPA DOS AEROPORTOS" />
-                                <div onClick={zoomToImage}>AEROPORTOS</div>
-                            </TransformComponent>
-                        </React.Fragment>
+                <ReactSvgPanZoomLoader
+                    src={mapa}
+                    render={(graph) => (
+                        <UncontrolledReactSVGPanZoom
+                            ref={Viewer}
+                            width={1500}
+                            height={1500}
+                            tool={tool}
+                            setTool={setTool}
+                            value={value}
+                            setValue={setValue}
+                            scaleFactorMin={1}
+                            scaleFactorMax={5}
+                            background='#F1FAEE'
+                            SVGBackground='#F1FAEE'
+                            customMiniature={() => null}
+                        >
+                            <svg width={500} height={500}>
+                                {graph}
+                            </svg>
+                        </UncontrolledReactSVGPanZoom>
                     )}
-                </TransformWrapper>
+                />
                 
             </div>
         </div>
