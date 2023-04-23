@@ -91,5 +91,4 @@ function main() {
     printBfsTree(cidade[1].id, cidade[11].id, adjList);
   
 }
-
 main();
