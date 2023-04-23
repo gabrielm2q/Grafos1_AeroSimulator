@@ -26,7 +26,8 @@ code {
 }
 
 .mapa {
-
+    position: relative;
+    overflow: hidden;
 }
 
 .menu-superior img {
@@ -36,9 +37,6 @@ code {
     height: auto;
     object-fit: contain;
 }
-
-
-
 
 .logo h1 {
     font-family: 'B612';
