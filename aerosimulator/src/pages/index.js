@@ -1,15 +1,18 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import ReactPanZoom from 'react-image-pan-zoom-rotate';
 import logo from '../assets/logo.png';
 import mapa from '../assets/mapa.svg';
+import { main } from '../utils/grafos';
 
-const Aero = () => {
-    const Viewer = useRef();
+export const Aero = () => {
+    // const Viewer = useRef();
+    let trajeto = main();
+    console.log(trajeto);
 
     return (
         <div class="flex-container">
             <div class="menu-superior">
-                <img src={logo}></img>
+                <img src={logo} alt="AEROPORTOS"></img>
             </div>
             <div class="mapa">
                 <ReactPanZoom
@@ -20,5 +23,3 @@ const Aero = () => {
         </div>
     );
 }
-
-export default Aero;
