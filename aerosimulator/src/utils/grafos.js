@@ -1,4 +1,4 @@
-const conexoes = {
+const conections = {
     0: [11, 16, 24, 25, 26],
     1: [2, 8, 23, 24],
     2: [1, 3, 23],
@@ -28,7 +28,7 @@ const conexoes = {
     26: [0,8,10]
 };
 
-const aeroportos = [
+const airports = [
     {id: 0, name: "Brasilia"},    {id: 1, name: "Teresina"},    {id: 2, name: "Fortaleza"},    
     {id: 3, name: "Natal"},    {id: 4, name: "Joao Pessoa"},    {id: 5, name: "Recife"},    
     {id: 6, name: "Maceio"},    {id: 7, name: "Aracaju"},    {id: 8, name: "Salvador"},    
@@ -65,18 +65,18 @@ const printBfsTree = (start, end, graph) => {
     }
     }
 
-    let trajeto = [];
+    let trajectory = [];
     let node = end;
     while (node !== null) {
-        trajeto.push(aeroportos[node].name)
+        trajectory.push(airports[node].name)
         // console.log(`${aeroportos[node].name} -> `);
         node = parents[node];
     }
     // console.log();
-    return trajeto;
+    return trajectory;
 }
   
 
 export const main = (departureId, destinationId) => {
-    return printBfsTree(departureId, destinationId, conexoes);
+    return printBfsTree(departureId, destinationId, conections);
 }
