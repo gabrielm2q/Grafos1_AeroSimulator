@@ -83,6 +83,6 @@ const printBfsTree = (start, end, graph) => {
 }
   
 
-export const main = () => {
-    return printBfsTree(0, 25, conexoes);
+export const main = (departureId, destinationId) => {
+    return printBfsTree(departureId, destinationId, conexoes);
 }
