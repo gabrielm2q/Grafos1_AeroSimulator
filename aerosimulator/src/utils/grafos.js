@@ -41,25 +41,20 @@ const aeroportos = [
 ];
  
 const printBfsTree = (start, end, graph) => {
-    // Inicializa o array de visitados e de pais
     const visited = new Array(Object.keys(graph).length).fill(false);
     const parents = new Array(Object.keys(graph).length).fill(null);
 
-    // Inicializa a fila
     const queue = [];
     queue.push(start);
     visited[start] = true;
 
-    // Loop principal da busca em largura
     while (queue.length > 0) {
         const node = queue.shift();
         
-        // Checa se é o vértice final
         if (node === end) {
         break;
         }
         
-        // Adiciona os vértices adjacentes não visitados na fila
         for (let i = 0; i < graph[node].length; i++) {
         const neighbor = graph[node][i];
         if (!visited[neighbor]) {
@@ -70,7 +65,6 @@ const printBfsTree = (start, end, graph) => {
     }
     }
 
-    // Percorre a árvore a partir do nó de destino até o nó de origem, imprimindo cada nó visitado e seu respectivo pai
     let trajeto = [];
     let node = end;
     while (node !== null) {
