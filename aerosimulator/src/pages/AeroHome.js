@@ -4,8 +4,8 @@ import ReactPanZoom from 'react-image-pan-zoom-rotate';
 import Select from 'react-select';
 import logo from '../assets/logo.png';
 import mapa from '../assets/mapa.svg';
-import { getAirports, getRemainingAirports } from '../utils/airports';
-import { main } from '../utils/grafos';
+import { getAirports } from '../utils/airports';
+import { main } from '../utils/bfs';
 
 
 
@@ -16,8 +16,12 @@ export const Aero = () => {
     let departureOpt = getAirports();
     let destinationOpt = getAirports();
     let route = [];
+
+    // function PrintOutputTitle(departure, destination) {
+
+    // }
+    
     function PrintOutputText(route) {
-        route.reverse();
         setOutputRoute(route.map((element) => {
             return "Passa em " + element + " \n"
         }))
@@ -25,7 +29,6 @@ export const Aero = () => {
 
     const handleChangeDeparture = (option) => {
         setDeparture(option.value);
-        let remaining = getRemainingAirports(option.value);
     };
 
     const handleChangeDestination = (option) => {
@@ -33,9 +36,10 @@ export const Aero = () => {
     };
 
     const handleButtonClick = () => {
+        PrintOutputText([]);
         if(departure !== destination && departure !== -1 && destination !== -1) {
-            route = []
-            route = main(departure, destination)
+            route = [];
+            route = main(departure, destination);
             PrintOutputText(route);
         }
     }
