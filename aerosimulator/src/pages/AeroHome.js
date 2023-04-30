@@ -7,8 +7,6 @@ import mapa from '../assets/mapa.svg';
 import { getAirportById, getAirports } from '../utils/airports';
 import { main } from '../utils/bfs';
 
-
-
 export const Aero = () => {
     const [departure, setDeparture] = React.useState(-1);
     const [destination, setDestination] = React.useState(-1);

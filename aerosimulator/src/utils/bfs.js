@@ -12,9 +12,7 @@ const printBfsTree = (start, end, graph) => {
     while (queue.length > 0) {
         const node = queue.shift();
         
-        if (node === end) {
-        break;
-        }
+        if (node === end) break;
         
         for (let i = 0; i < graph[node].length; i++) {
             const neighbor = graph[node][i];
