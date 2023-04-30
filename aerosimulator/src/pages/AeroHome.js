@@ -4,7 +4,7 @@ import ReactPanZoom from 'react-image-pan-zoom-rotate';
 import Select from 'react-select';
 import logo from '../assets/logo.png';
 import mapa from '../assets/mapa.svg';
-import { getAirports } from '../utils/airports';
+import { getAirportById, getAirports } from '../utils/airports';
 import { main } from '../utils/bfs';
 
 
@@ -13,17 +13,25 @@ export const Aero = () => {
     const [departure, setDeparture] = React.useState(-1);
     const [destination, setDestination] = React.useState(-1);
     const [outputRoute, setOutputRoute] = React.useState("");
+    const [outputTitle, setOutputTitle] = React.useState("");
     let departureOpt = getAirports();
     let destinationOpt = getAirports();
     let route = [];
 
-    // function PrintOutputTitle(departure, destination) {
+    function clearOutputs(){
+        setOutputTitle("");
+        setOutputRoute("");
+    }
 
-    // }
+    function PrintOutputTitle(departure, destination) {
+        setOutputTitle(() => {
+            return `Rota de ${departure.name} para ${destination.name}`
+        })
+    }
     
     function PrintOutputText(route) {
         setOutputRoute(route.map((element) => {
-            return "Passa em " + element + " \n"
+            return "\nPassa em " + element + " \n"
         }))
     }
 
@@ -36,10 +44,11 @@ export const Aero = () => {
     };
 
     const handleButtonClick = () => {
-        PrintOutputText([]);
+        clearOutputs();
         if(departure !== destination && departure !== -1 && destination !== -1) {
             route = [];
             route = main(departure, destination);
+            PrintOutputTitle(getAirportById(departure), getAirportById(destination));
             PrintOutputText(route);
         }
     }
@@ -94,7 +103,9 @@ export const Aero = () => {
                         </div>
                     </div>
                     <div className='contentReturnArea'>
-                        <div className='contentTitle'></div>
+                        <div className='contentTitle'>
+                            <h1>{outputTitle}</h1>
+                        </div>
                         <div className='contentRoute'>
                             <p>{outputRoute}</p>
                         </div>

@@ -10,6 +10,10 @@ export const airports = [
     { id: 24, name: "Palmas"},    {id: 25, name: "Goiânia"},    {id: 26, name: "Belo Horizonte"}
 ];
 
+export const getAirportById = (id) => {
+    return airports[id]
+}
+
 export const getAirports = () => {
     return airports.map((airport) => {
         return { value: airport.id, label: airport.name }
