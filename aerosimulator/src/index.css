@@ -101,3 +101,14 @@ code {
     flex-wrap: wrap;
 }
 
+.contentReturnArea h1 {
+    font-size: x-large;
+    font-weight: bolder;
+    color: #1D3557;
+}
+
+.contentReturnArea h3 {
+    font-size: large;
+    font-weight: light;
+    color: #1F3C6E;
+}
