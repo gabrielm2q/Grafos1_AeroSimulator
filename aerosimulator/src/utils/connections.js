@@ -25,9 +25,5 @@ export const connections = {
     23: [1, 2, 22],
     24: [0, 1, 19, 22],
     25: [0, 15],
-    26: [0,8,10]
+    26: [0, 8, 10]
 };
-
-export const connectionDistances = {
-    
-}
