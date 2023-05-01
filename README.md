@@ -1,6 +1,6 @@
 # AeroSimulator
 
-**Conteúdo da Disciplina**: Grafos 1<br>
+**Conteúdo da Disciplina**: **Grafos 1**<br>
 
 ## Alunos
 
@@ -35,8 +35,8 @@ O trabalho do algoritmo para a construção das rotas foi baseado no conceito de
 
 ## Instalação
 
-**Linguagem**: JavaScript<br>
-**Framework**: React<br>
+**Linguagem**: *JavaScript*<br>
+**Framework**: *React*<br>
 
 ## Como rodar o projeto?
 
@@ -102,4 +102,4 @@ Caso a aplicação, ao ser executada em máquina local, apresente algum erro rel
 
 Para tal, garanta que foi executado o comando *npm install* (conforme explicado anteriormente).
 
-Caso já tenha sido executado o comando e, mesmo com as dependências instaladas, ainda sejam exibidos erros quanto à estas, uma possível solução não usual (mas ainda assim possível) é a deleção por completo da pasta *node_modules* que está localizada em *Grafos1_AeroSimulator/aerosimulator/node_modules*. Após a deleção, faz-se necessário executar novamente o comando *npm install* para reinstalar as dependências. Mas tome cuidado! Essa é uma solução não usual e a deleção ser **exclusivamente** da pasta *node_modules**.
+Caso já tenha sido executado o comando e, mesmo com as dependências instaladas, ainda sejam exibidos erros quanto à estas, uma possível solução não usual (mas ainda assim possível) é a deleção por completo da pasta *node_modules* que está localizada em *Grafos1_AeroSimulator/aerosimulator/node_modules*. Após a deleção, faz-se necessário executar novamente o comando *npm install* para reinstalar as dependências. Mas tome cuidado! Essa é uma solução não usual e a deleção ser **exclusivamente** da pasta **node_modules**.
