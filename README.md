@@ -24,7 +24,9 @@ Em progresso.
 
 ## Como rodar o projeto?
 
-Primeiramente, entre na pasta *aerosimulator*, onde o projeto está localizado:
+Primeira, faça um gitclone nesse repositório
+
+Após isso, entre na pasta *aerosimulator*, onde o projeto está localizado:
 
 ```
 cd aerosimulator
@@ -44,9 +46,6 @@ npm run start
 
 O projeto será automaticamente executado e estará disponível em uma porta de sua máquina (geralmente a porta [3000](<http://localhost:3000>)).
 
-## Uso
-
-Informações relativas ao uso do projeto em progresso.
 
 ## Outros
 
