@@ -80,6 +80,10 @@ Abaixo, uma imagem explicativa quanto ao uso da aplicação:
 
 ![Imagem com instruções para o uso da aplicação](media/instructions.png)
 
+## Apresentação
+
+Caso queira assistir a apresentação realizada pela dupla a respeito do projeto, basta baixar o vídeo presente [**AQUI**](/media/apresentacao.mp4).
+
 ## Outros
 
 ### Conceito de "Melhor Rota"
