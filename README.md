@@ -13,6 +13,8 @@
 
 O presente trabalho visa calcular a melhor rota entre os aeroportos dados os pontos de partida e chegada, oferecendo informações sobre as conexões necessárias e tamanho total da rota.
 
+O trabalho do algoritmo para a construção das rotas foi baseado no conceito de Busca em Largura de Grafos, visando a obtenção do menor caminho entre os vértices desse grafo (aeroportos) através das arestas (conexões entre aeroportos) do grafo. 
+
 ## Screenshots
 
 Em progresso.
