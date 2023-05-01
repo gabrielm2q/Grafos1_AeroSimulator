@@ -19,19 +19,19 @@ O trabalho do algoritmo para a construção das rotas foi baseado no conceito de
 
 ### Exemplo de uso
 
-![Exemplo de busca da rota entre Porto Alegre e João Pessoa]('/media/screenshot1.png')
+![Exemplo de busca da rota entre Porto Alegre e João Pessoa](/media/screenshot1.png)
 
 ### Exemplo de uso
 
-![Exemplo de busca da rota entre Brasília e Goiânia]('/media/screenshot2.png')
+![Exemplo de busca da rota entre Brasília e Goiânia](/media/screenshot2.png)
 
 ### Exemplo de erro
 
-![Exemplo de busca da rota incorreta onde o ponto de partida é igual ao destino (de Brasília para Brasília)]('/media/screenshot3.png')
+![Exemplo de busca da rota incorreta onde o ponto de partida é igual ao destino (de Brasília para Brasília)](/media/screenshot3.png)
 
 ### Exemplo de erro
 
-![Exemplo de busca da rota incorreta onde os pontos de partida e o destino estão vazios]('/media/screenshot4.png')
+![Exemplo de busca da rota incorreta onde os pontos de partida e o destino estão vazios](/media/screenshot4.png)
 
 ## Instalação
 
@@ -78,7 +78,7 @@ Após preencher os campos de seleção de valores com os pontos de partida e des
 
 Abaixo, uma imagem explicativa quanto ao uso da aplicação:
 
-![Imagem com instruções para o uso da aplicação]('media/instructions.png')
+![Imagem com instruções para o uso da aplicação](media/instructions.png)
 
 ## Outros
 
