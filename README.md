@@ -82,7 +82,7 @@ Abaixo, uma imagem explicativa quanto ao uso da aplicação:
 
 ## Apresentação
 
-Caso queira assistir a apresentação realizada pela dupla a respeito do projeto, basta baixar o vídeo presente [**AQUI**](https://unbbr-my.sharepoint.com/:v:/g/personal/200018167_aluno_unb_br/EcuNwMCNoYdBsEhezcqV5rYBLTBT3PcDozvcc8U6C0YzZg?e=uzgkhs).
+Caso queira assistir a apresentação realizada pela dupla a respeito do projeto, basta baixar o vídeo presente [**AQUI**](/media/apresentacao_dupla14.mp4) ou então assistir o vídeo presente na plataforma *Stream* por [**AQUI**](https://unbbr-my.sharepoint.com/:v:/g/personal/200018167_aluno_unb_br/EcuNwMCNoYdBsEhezcqV5rYBLTBT3PcDozvcc8U6C0YzZg?e=uzgkhs).
 
 ## Outros
 
