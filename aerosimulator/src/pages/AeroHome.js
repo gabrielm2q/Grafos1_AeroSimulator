@@ -1,5 +1,5 @@
 import Button from '@mui/material/Button';
-import React from 'react';
+import React, { useState } from 'react';
 import ReactPanZoom from 'react-image-pan-zoom-rotate';
 import Select from 'react-select';
 import logo from '../assets/logo.png';
@@ -10,7 +10,7 @@ import { main } from '../utils/bfs';
 export const Aero = () => {
     const [departure, setDeparture] = React.useState(-1);
     const [destination, setDestination] = React.useState(-1);
-    const [outputRoute, setOutputRoute] = React.useState("");
+    const [outputRoute, setOutputRoute] = useState([]);
     const [outputTitle, setOutputTitle] = React.useState("");
     let departureOpt = getAirports();
     let destinationOpt = getAirports();
@@ -26,11 +26,36 @@ export const Aero = () => {
             return `Rota de ${departure.name} para ${destination.name}`
         })
     }
+
+    function PrintErrorMessage(code) {
+        switch (code) {
+            case 1:
+                setOutputTitle("O aeroporto de partida deve ser diferente do aeroporto de destino!")
+                break;
+            case 2:
+                setOutputTitle("Você deve escolher algum aeroporto válido!")
+                break;
+            default:
+                setOutputTitle("Entrada inválida!")
+        }
+
+        setOutputRoute([])
+    }
     
     function PrintOutputText(route) {
-        setOutputRoute(route.map((element) => {
-            return "\nPassa em " + element + " \n"
-        }))
+        let intermediateRoute = []
+        let message = []
+
+        if(route.length > 2)
+            intermediateRoute = route.slice(1)
+
+        message.push(`· Saia do Aeroporto de ${route[0]} com destino a ${route[1]}`)
+        for(let i = 0; i < (intermediateRoute.length - 1); i++) {
+            message.push(`· Faça conexão no Aeroporto de ${intermediateRoute[i]} com destino a ${intermediateRoute[i+1]}`)
+        }
+        message.push(`· Desembarque no Aeroporto de ${route[route.length-1]}`)
+
+        setOutputRoute(message)
     }
 
     const handleChangeDeparture = (option) => {
@@ -43,7 +68,14 @@ export const Aero = () => {
 
     const handleButtonClick = () => {
         clearOutputs();
-        if(departure !== destination && departure !== -1 && destination !== -1) {
+        if(
+            departure === destination  ||
+            departure <= -1           ||
+            destination <= -1
+        ) {
+            if(departure <= -1 || destination <= -1) PrintErrorMessage(2)
+            else PrintErrorMessage(1)
+        } else {
             route = [];
             route = main(departure, destination);
             PrintOutputTitle(getAirportById(departure), getAirportById(destination));
@@ -105,7 +137,15 @@ export const Aero = () => {
                             <h1>{outputTitle}</h1>
                         </div>
                         <div className='contentRoute'>
-                            <p>{outputRoute}</p>
+                            {outputRoute.map((element) => {
+                                if(outputRoute.length > 1) {
+                                    return (
+                                        <h3>{element}</h3>
+                                    )
+                                } else {
+                                    return undefined
+                                }
+                            })}
                         </div>
                     </div>
                 </div>
